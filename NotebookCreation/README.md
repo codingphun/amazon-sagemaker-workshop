@@ -9,7 +9,7 @@ SageMaker typically uses S3 as storage for data and model artifacts.  In this st
 
 ### High-Level Instructions
 
-Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your bucket's name must be globally unique across all regions and customers. We recommend using a name like `smworkshop-firstname-lastname`. If you get an error that your bucket name already exists, try adding additional numbers or characters until you find an unused name.
+Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your bucket's name must be globally unique across all regions and customers. We recommend using a name like `sagemaker-workshop-firstname-lastname`. If you get an error that your bucket name already exists, try adding additional numbers or characters until you find an unused name.
 
 <details>
 <summary><strong>Step-by-step instructions (expand for details)</strong></summary><p>
@@ -18,7 +18,7 @@ Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your
 
 1. Choose **+Create Bucket**
 
-1. Provide a globally unique name for your bucket such as `smworkshop-firstname-lastname`.
+1. Provide a globally unique name for your bucket such as `sagemaker-workshop-firstname-lastname`.
 
 1. Select the Region you've chosen to use for this workshop from the dropdown.
 
@@ -38,7 +38,7 @@ Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your
 
 ![Notebook Instances](./images/notebook-instances.png)
 
-4. Type smworkshop-[First Name]-[Last Name] into the **Notebook instance name** text box, and select ml.m4.xlarge for the **Notebook instance type**.
+4. Type `sagemaker-workshop-firstname-lastname` into the **Notebook instance name** text box, and select ml.m4.xlarge for the **Notebook instance type**.
 
 ![Create Notebook Instance](./images/notebook-settings.png)
 
@@ -55,5 +55,3 @@ Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your
 2. Click **Open**. You will now see the Jupyter homepage for your notebook instance.
 
 ![Open Notebook](./images/jupyter-homepage.png)
-
-

@@ -16,7 +16,7 @@ This module also shows how to use SageMaker's built-in algorithms via hosted Jup
 4. To upload the notebook, click the **Upload** button on the right. Then in the file selection popup, select the file 'video-game-sales-xgboost.ipynb' from the notebooks subdirectory in the folder on your computer where you downloaded this GitHub repository. Click the blue **Upload** button that appears to the right of the notebook's file name.
 5. You are now ready to begin the notebook:  click the notebook's file name to open it.
 
-6. In the ```bucket = '<your_s3_bucket_name_here>'``` code line, paste the name of the S3 bucket you created in Module 1 to replace ```<your_s3_bucket_name_here>```.  The code line should now read similar to ```bucket = 'smworkshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name.  
+6. In the ```bucket = '<your_s3_bucket_name_here>'``` code line, paste the name of the S3 bucket you created in Module 1 to replace ```<your_s3_bucket_name_here>```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name.  
 
 7. Follow the directions in the notebook.  When it is time to set up a training job, return from the notebook to these instructions.  
 
@@ -47,7 +47,7 @@ chmod +x videogames.sh
   - Ohio:  825641698319.dkr.ecr.us-east-2.amazonaws.com/xgboost:latest
   - Ireland:  685385470294.dkr.ecr.eu-west-1.amazonaws.com/xgboost:latest
    
-- bucket:  the name of the S3 bucket you used in your notebook.  It should look like:  `s3://smworkshop-john-smith`.
+- bucket:  the name of the S3 bucket you used in your notebook.  It should look like:  `s3://sagemaker-workshop-john-smith`.
 
 - region:  the region code for the region where you are running this workshop, either `us-east-1` for N. Virginia, `us-west-2` for Oregon, `us-east-2` for Ohio, or `eu-west-1` for Ireland.
 
@@ -102,7 +102,7 @@ sagemaker create-training-job \
   - Ohio:  825641698319.dkr.ecr.us-east-2.amazonaws.com/xgboost:latest
   - Ireland:  685385470294.dkr.ecr.eu-west-1.amazonaws.com/xgboost:latest
    
-- For the 'Location of model artifacts' field under **Primary Container**, enter the path to the output of your replicated training job.  To find the path, go back to your first browser tab, click **Jobs** in the left pane, then find and click the replicated job name, which will look like `videogames-xgboost-<date>`.  Scroll down to the **Outputs** section, then copy the path under 'S3 model artifact'.  Paste the path in the field; it should look like `s3://smworkshop-john-smith/sagemaker/videogames_xgboost/videogames-xgboost-2018-04-17-20-40-13/output/model.tar.gz `.  
+- For the 'Location of model artifacts' field under **Primary Container**, enter the path to the output of your replicated training job.  To find the path, go back to your first browser tab, click **Jobs** in the left pane, then find and click the replicated job name, which will look like `videogames-xgboost-<date>`.  Scroll down to the **Outputs** section, then copy the path under 'S3 model artifact'.  Paste the path in the field; it should look like `s3://sagemaker-workshop-john-smith/sagemaker/videogames_xgboost/videogames-xgboost-2018-04-17-20-40-13/output/model.tar.gz `.  
 
 - Click **Create model** at the bottom of the page.
 

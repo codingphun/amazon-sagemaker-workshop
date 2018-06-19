@@ -72,7 +72,7 @@ In this module, we will learn about how to take full advantage of distributed tr
 
 5. You are now ready to begin the notebook:  click the notebook's file name to open it.
 
-6. In the ```bucket = '<your_s3_bucket_name_here>'``` code line, paste the name of the S3 bucket you created in **Creating a Notebook Instance** to replace ```<your_s3_bucket_name_here>```.  The code line should now read similar to ```bucket = 'smworkshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name.  
+6. In the ```bucket = '<your_s3_bucket_name_here>'``` code line, paste the name of the S3 bucket you created in **Creating a Notebook Instance** to replace ```<your_s3_bucket_name_here>```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name.  
 
 - In this workshop, you also will be accessing a S3 bucket that holds data from one of the AWS Public Data Sets.
 
@@ -106,7 +106,7 @@ chmod +x replicated.sh
   - Ohio:  404615174143.dkr.ecr.us-east-2.amazonaws.com/linear-learner:latest
   - Ireland:  438346466558.dkr.ecr.eu-west-1.amazonaws.com/linear-learner:latest
    
-- bucket:  the name of the S3 bucket you used in your notebook.  It should look like:  `s3://smworkshop-john-smith`.
+- bucket:  the name of the S3 bucket you used in your notebook.  It should look like:  `s3://sagemaker-workshop-john-smith`.
 
 - region:  the region code for the region where you are running this workshop, either `us-east-1` for N. Virginia, `us-west-2` for Oregon, `us-east-2` for Ohio, or `eu-west-1` for Ireland.
 
@@ -160,7 +160,7 @@ chmod +x sharded.sh
   - Ohio:  404615174143.dkr.ecr.us-east-2.amazonaws.com/linear-learner:latest
   - Ireland:  438346466558.dkr.ecr.eu-west-1.amazonaws.com/linear-learner:latest
    
-- bucket:  same as for the previous script.  It should look like:  `s3://smworkshop-john-smith`.
+- bucket:  same as for the previous script.  It should look like:  `s3://sagemaker-workshop-john-smith`.
 
 - region:  the region code for the region where you are running this workshop, either `us-east-1` for N. Virginia, `us-west-2` for Oregon, `us-east-2` for Ohio, or `eu-west-1` for Ireland.
 
