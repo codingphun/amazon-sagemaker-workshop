@@ -110,15 +110,18 @@ chmod +x replicated.sh
 
 - region:  the region code for the region where you are running this workshop, either `us-east-1` for N. Virginia, `us-west-2` for Oregon, `us-east-2` for Ohio, or `eu-west-1` for Ireland.
 
+- yourname:  your name in the format "firstname-lastname"
+
 ```
 # Fill in the values of these four variables
 arn_role=<arn-of-your-notebook-role>
 training_image=<training-image-for-region>
 bucket=<name-of-your-s3-bucket>
 region=<your-region>
+yourname=<firstname-lastname>
 
 prefix=/sagemaker/data_distribution_types
-training_job_name=linear-replicated-`date '+%Y-%m-%d-%H-%M-%S'`
+training_job_name=linear-replicated-$yourname-`date '+%Y-%m-%d-%H-%M-%S'`
 
 training_data=$bucket$prefix/train
 eval_data=$bucket$prefix/validation
@@ -164,15 +167,18 @@ chmod +x sharded.sh
 
 - region:  the region code for the region where you are running this workshop, either `us-east-1` for N. Virginia, `us-west-2` for Oregon, `us-east-2` for Ohio, or `eu-west-1` for Ireland.
 
+- yourname:  your name in the format "firstname-lastname"
+
 ```
 # Fill in the values of these four variables
 arn_role=<arn-of-your-notebook-role>
 training_image=<training-image-for-region>
 bucket=<name-of-your-s3-bucket>
 region=<your-region>
+yourname=<firstname-lastname>
 
 prefix=/sagemaker/data_distribution_types
-training_job_name=linear-sharded-`date '+%Y-%m-%d-%H-%M-%S'`
+training_job_name=linear-sharded-$yourname-`date '+%Y-%m-%d-%H-%M-%S'`
 
 training_data=$bucket$prefix/train
 eval_data=$bucket$prefix/validation
@@ -206,7 +212,11 @@ sagemaker create-training-job \
 
 - In the left pane of the SageMaker console home page, right click the **Models** link and open it in another tab of your browser.  Click the **Create Model** button at the upper right above the 'Models' table.
 
-- For the 'Model name' field under **Model Settings**, enter `distributed-replicated`.  
+- For the 'Model name' field under **Model Settings**, enter `distributed-replicated-firstname-lastname`.  
+
+- For the 'IAM role' field under **Model Settings**, select **Enter a custom IAM role ARN**.
+
+- For the 'Customer IAM role ARN' field under **Model Settings**, enter the SageMaker role ARN.  For example, `arn:aws:iam::012345678901:role/sagemaker-workshop`.
 
 - For the 'Location of inference code image' field under **Primary Container**, enter the name of the same Docker image you specified previously for the region where you're running this workshop. For ease of reference, here are the image names again:
 
@@ -215,11 +225,11 @@ sagemaker create-training-job \
   - Ohio:  404615174143.dkr.ecr.us-east-2.amazonaws.com/linear-learner:latest
   - Ireland:  438346466558.dkr.ecr.eu-west-1.amazonaws.com/linear-learner:latest
 
-- For the 'Location of model artifacts' field under **Primary Container**, enter the path to the output of your replicated training job.  To find the path, go back to your first browser tab, click **Jobs** in the left pane, then find and click the replicated job name, which will look like `linear-replicated-<date>`.  Scroll down to the **Outputs** section, then copy the path under 'S3 model artifact'.  Paste the path in the field; it should look like `s3://sagemaker-projects-pdx/sagemaker/data_distribution_types/linear-replicated-2018-03-11-18-13-13/output/model.tar.gz`.  
+- For the 'Location of model artifacts' field under **Primary Container**, enter the path to the output of your replicated training job.  To find the path, go back to your first browser tab, click **Jobs** in the left pane, then find and click the replicated job name, which will look like `linear-replicated-firstname-lastname-<date>`.  Scroll down to the **Outputs** section, then copy the path under 'S3 model artifact'.  Paste the path in the field; it should look like `s3://sagemaker-projects-pdx/sagemaker/data_distribution_types/linear-replicated-john-smith-2018-03-11-18-13-13/output/model.tar.gz`.  
 
 - Click **Create model** at the bottom of the page.
 
-- Repeat the above steps for the sharded training job model, except:  for 'Model name', enter `distributed-sharded`, and for 'Location of model artifacts', enter the path for the sharded training job model artifact.  
+- Repeat the above steps for the sharded training job model, except:  for 'Model name', enter `distributed-sharded-firstname-lastname`, and for 'Location of model artifacts', enter the path for the sharded training job model artifact.  
 
 ![Model](./images/model.png)
 
@@ -227,11 +237,11 @@ sagemaker create-training-job \
 
 - In the left pane of the SageMaker console, click **Endpoint configuration**.  Click the **Create endpoint configuration** button at the upper right above the 'Endpoint configuration' table.
 
-- For the 'Endpoint configuration name' field under **New endpoint configuration**, enter `distributed-replicated`.  
+- For the 'Endpoint configuration name' field under **New endpoint configuration**, enter `distributed-replicated-firstname-lastname`.  
 
-- Under **Production variants**, click **Add model**.  From the **Add model** popup, select the `distributed-replicated` model you created earlier, and click **Save**.  Then click **Create endpoint configuration** at the bottom of the page.
+- Under **Production variants**, click **Add model**.  From the **Add model** popup, select the `distributed-replicated-firstname-lastname` model you created earlier, and click **Save**.  Then click **Create endpoint configuration** at the bottom of the page.
 
-- Repeat the above steps for the sharded training job model, except:  for 'Endpoint configuration name', enter `distributed-sharded`, and for the **Add model** popup, select the `distributed-sharded` model.  
+- Repeat the above steps for the sharded training job model, except:  for 'Endpoint configuration name', enter `distributed-sharded-firstname-lastname`, and for the **Add model** popup, select the `distributed-sharded-firstname-lastname` model.  
 
 ![Endpoint Configuration](./images/endpoint-config.png)
 
@@ -239,11 +249,11 @@ sagemaker create-training-job \
 
 - In the left pane of the SageMaker console, click **Endpoints**.  Click the **Create endpoint** button at the upper right above the 'Endpoints' table.
 
-- For the 'Endpoint name' field under **Endpoint**, enter `distributed-replicated`. 
+- For the 'Endpoint name' field under **Endpoint**, enter `distributed-replicated-firstname-lastname`. 
 
-- Under **Attach endpoint configuration**, leave 'Use an existing endpoint configuration' selected, then under **Endpoint configuration**, select `distributed-replicated` from the table, then click **Select endpoint configuration** at the bottom of the table.  Then click **Create endpoint** at the bottom of the page.
+- Under **Attach endpoint configuration**, leave 'Use an existing endpoint configuration' selected, then under **Endpoint configuration**, select `distributed-replicated-firstname-lastname` from the table, then click **Select endpoint configuration** at the bottom of the table.  Then click **Create endpoint** at the bottom of the page.
 
-- Repeat the above steps, except:  for 'Endpoint name', enter `distributed-sharded`, and for the **Endpoint configuration** table, select the `distributed-sharded` endpoint configuration. 
+- Repeat the above steps, except:  for 'Endpoint name', enter `distributed-sharded-firstname-lastname`, and for the **Endpoint configuration** table, select the `distributed-sharded-firstname-lastname` endpoint configuration. 
 
 - In the **Endpoints** table, refer to the 'Status' column, and wait for both endpoints to change from 'Creating' to 'InService' before proceeding to the next step. It will take several minutes for endpoint creation, possibly as long as ten minutes.  
 

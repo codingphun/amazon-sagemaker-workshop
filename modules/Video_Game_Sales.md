@@ -34,6 +34,7 @@ This module also shows how to use SageMaker's built-in algorithms via hosted Jup
 10. Create a text file named `videogames.sh`. If you haven't done so already, open a terminal/command window that supports Bash to enter commands. In the terminal window, change to the directory in which you created the file (if you're not already there), then run the following command:
 
 ```
+touch videogames.sh
 chmod +x videogames.sh
 ```
 
@@ -51,15 +52,18 @@ chmod +x videogames.sh
 
 - region:  the region code for the region where you are running this workshop, either `us-east-1` for N. Virginia, `us-west-2` for Oregon, `us-east-2` for Ohio, or `eu-west-1` for Ireland.
 
+- yourname:  your name in the format "firstname-lastname"
+
 ```
 # Fill in the values of these four variables
 arn_role=<arn-of-your-notebook-role>
 training_image=<training-image-for-region>
 bucket=<name-of-your-s3-bucket>
 region=<your-region>
+yourname=<firstname-lastname>
 
 prefix=/sagemaker/videogames_xgboost
-training_job_name=videogames-xgboost-`date '+%Y-%m-%d-%H-%M-%S'`
+training_job_name=videogames-xgboost-$yourname-`date '+%Y-%m-%d-%H-%M-%S'`
 
 training_data=$bucket$prefix/train
 eval_data=$bucket$prefix/validation
@@ -93,7 +97,11 @@ sagemaker create-training-job \
 
 - In the left pane of the SageMaker console home page, right click the **Models** link and open it in another tab of your browser.  Click the **Create Model** button at the upper right above the 'Models' table.
 
-- For the 'Model name' field under **Model Settings**, enter `videogames-xgboost`.  
+- For the 'Model name' field under **Model Settings**, enter `videogames-xgboost-firstname-lastname`.  
+
+- For the 'IAM role' field under **Model Settings**, select **Enter a custom IAM role ARN**.
+
+- For the 'Customer IAM role ARN' field under **Model Settings**, enter the SageMaker role ARN.  For example, `arn:aws:iam::012345678901:role/sagemaker-workshop`.
 
 - For the 'Location of inference code image' field under **Primary Container**, enter the name of the same Docker image you specified previously for the region where you're running this workshop. For ease of reference, here are the image names again:
 
@@ -102,19 +110,21 @@ sagemaker create-training-job \
   - Ohio:  825641698319.dkr.ecr.us-east-2.amazonaws.com/xgboost:latest
   - Ireland:  685385470294.dkr.ecr.eu-west-1.amazonaws.com/xgboost:latest
    
-- For the 'Location of model artifacts' field under **Primary Container**, enter the path to the output of your replicated training job.  To find the path, go back to your first browser tab, click **Jobs** in the left pane, then find and click the replicated job name, which will look like `videogames-xgboost-<date>`.  Scroll down to the **Outputs** section, then copy the path under 'S3 model artifact'.  Paste the path in the field; it should look like `s3://sagemaker-workshop-john-smith/sagemaker/videogames_xgboost/videogames-xgboost-2018-04-17-20-40-13/output/model.tar.gz `.  
+- For the 'Location of model artifacts' field under **Primary Container**, enter the path to the output of your replicated training job.  To find the path, go back to your first browser tab, click **Jobs** in the left pane, then find and click the replicated job name, which will look like `videogames-xgboost-firstname-lastname-<date>`.  Scroll down to the **Outputs** section, then copy the path under 'S3 model artifact'.  Paste the path in the field; it should look like `s3://sagemaker-workshop-john-smith/sagemaker/videogames_xgboost/videogames-xgboost-john-smith-2018-04-17-20-40-13/output/model.tar.gz `.  
 
 - Click **Create model** at the bottom of the page.
 
+<!--
 ![Model](./images/videogames-model.png)
+-->
 
 15.  **Endpoint Configuration**:  Once we've setup our model, we can configure what our hosting endpoint should be. Here we specify the EC2 instance type to use for hosting, the initial number of instances, and our hosting model name.  Here are the steps to do this via the SageMaker console (see screenshot below for an example of all relevant fields filled in for the Oregon AWS Region):
 
 - In the left pane of the SageMaker console, click **Endpoint configuration**.  Click the **Create endpoint configuration** button at the upper right above the 'Endpoint configuration' table.
 
-- For the 'Endpoint configuration name' field under **New endpoint configuration**, enter `videogames-xgboost`.  
+- For the 'Endpoint configuration name' field under **New endpoint configuration**, enter `videogames-xgboost-firstname-lastname`.  
 
-- Under **Production variants**, click **Add model**.  From the **Add model** popup, select the `videogames-xgboost` model you created earlier, and click **Save**.  Then click **Create endpoint configuration** at the bottom of the page.
+- Under **Production variants**, click **Add model**.  From the **Add model** popup, select the `videogames-xgboost-firstname-lastname` model you created earlier, and click **Save**.  Then click **Create endpoint configuration** at the bottom of the page.
 
 ![Endpoint Configuration](./images/videogames-endpoint-config.png)
 
@@ -122,9 +132,9 @@ sagemaker create-training-job \
 
 - In the left pane of the SageMaker console, click **Endpoints**.  Click the **Create endpoint** button at the upper right above the 'Endpoints' table.
 
-- For the 'Endpoint name' field under **Endpoint**, enter `videogames-xgboost`. 
+- For the 'Endpoint name' field under **Endpoint**, enter `videogames-xgboost-firstname-lastname`. 
 
-- Under **Attach endpoint configuration**, leave 'Use an existing endpoint configuration' selected, then under **Endpoint configuration**, select `videogames-xgboost` from the table, then click **Select endpoint configuration** at the bottom of the table.  Then click **Create endpoint** at the bottom of the page.
+- Under **Attach endpoint configuration**, leave 'Use an existing endpoint configuration' selected, then under **Endpoint configuration**, select `videogames-xgboost-firstname-lastname` from the table, then click **Select endpoint configuration** at the bottom of the table.  Then click **Create endpoint** at the bottom of the page.
 
 - In the **Endpoints** table, refer to the 'Status' column, and wait for the endpoint status to change from 'Creating' to 'InService' before proceeding to the next step. It will take several minutes for endpoint creation, possibly as long as ten minutes.  
 

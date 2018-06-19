@@ -12,7 +12,7 @@ Take a moment now and setup your Cloud9 development environment.
 - Click **Create environment**.
 
 
-- Enter `Development` into **Name** and optionally provide a **Description**.
+- Enter `development-firstname-lastname` into **Name** and optionally provide a **Description**.
 
 
 - Click **Next step**.
