@@ -42,11 +42,9 @@ Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your
 
 ![Create Notebook Instance](./images/notebook-settings.png)
 
-5. For IAM role, choose **Enter a custom IAM role ARN**, and in the resulting pop-up modal, select **Specific S3 buckets** under **S3 Buckets you specify – optional**. In the text field, paste the name of the S3 bucket you created above, AND the following bucket name separated from the first by a comma:  `gdelt-open-data`.  The combined field entry should look similar to ```smworkshop-john-smith, gdelt-open-data```. Click **Create role**.
+5. For IAM role, choose **Enter a custom IAM role ARN**, and in the **Custom IAM role ARN** field, paste the ARN of the SageMaker IAM Role.
 
-![Create IAM role](./images/role-popup.png)
-
-6. You will be taken back to the Create Notebook instance page.  Click **Create notebook instance**.
+6. Click **Create notebook instance**.
 
 ### 3. Accessing the Notebook Instance
 
