@@ -37,12 +37,6 @@ Once you've chosen a region, you should create all of the resources for this wor
 
 We recommend you use the latest version of Chrome or Firefox to complete this workshop.
 
-
-# Workshops
-
-- [**Introduction to SageMaker**](Introduction) - This workshop demonstrates the main features of SageMaker via a set of straightforward examples for common use cases.
-
-
 - [**SageMaker Built-in Algorithms**](Built-in-Algorithms) - The focus of this workshop is on SageMaker's built-in algorithms. These algorithms are ready-to-use, scalable, and provide many other conveniences. The workshop shows how to use SageMaker's built-in algorithms via hosted Jupyter notebooks, the AWS CLI, and the SageMaker console.
 
 
