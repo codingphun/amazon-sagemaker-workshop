@@ -37,9 +37,6 @@ Once you've chosen a region, you should create all of the resources for this wor
 
 We recommend you use the latest version of Chrome or Firefox to complete this workshop.
 
-- [**SageMaker Built-in Algorithms**](Built-in-Algorithms) - The focus of this workshop is on SageMaker's built-in algorithms. These algorithms are ready-to-use, scalable, and provide many other conveniences. The workshop shows how to use SageMaker's built-in algorithms via hosted Jupyter notebooks, the AWS CLI, and the SageMaker console.
-
-
 ## AWS Command Line Interface
 
 To complete certain workshop modules, you'll need the AWS Command Line Interface (CLI) and a Bash environment. You'll use the AWS CLI to interface with SageMaker and other AWS services. 
