@@ -10,20 +10,11 @@ This workshop is divided into multiple modules. After completing **Preliminaries
 
 - Video Game Sales 
 
-- Distributed Training with TensorFlow 
-
 - Image Classification  
 
 ## Preliminaries
 
-- Be sure you have completed all of the Prerequisites listed in the [**main README**](../README.md).  This workshop makes use of the AWS CLI and requires the use of a Bash environment for scripting. AWS Cloud9 is used to run the CLI and scripts; if you haven't done so already, please complete the [**Cloud9 Setup**](../Cloud9).
-
-- **DOWNLOAD THIS REPOSITORY TO YOUR COMPUTER**. To do so:
-  - Return to the home page of this GitHub repository or open it in another tab;
-  - Click the green **Clone or download** button from the upper right of the main page of the repository, then **Download ZIP**.
-  - Use the downloaded notebooks in the notebooks directory rather than other versions you might find inside your notebook instance or elsewhere; the downloaded versions are modified for use in workshops.  
-
-If you are new to using Jupyter notebooks, read the next section, otherwise you may now skip ahead to the next module.
+- Be sure you have completed all of the Prerequisites listed in the [**main README**](../README.md). 
 
 ### Jupyter Notebooks:  A Brief Overview
 
@@ -47,21 +38,14 @@ To create a SageMaker notebook instance for this workshop, follow the instructio
 
 ## Video Game Sales
 
-Please go to the following link for this module:  [**Video Game Sales**](../modules/Video_Game_Sales.md).  Be sure to use the downloaded version of the applicable Jupyter notebook.  
-
-When you're finished, return here to move on to the next module.  
-
-
-## Distributed Training with TensorFlow 
-
-Please go to the following link for this module:  [**TensorFlow Distributed MNIST**](../modules/TensorFlow_Distributed_MNIST.md).  Be sure to use the downloaded version of the applicable Jupyter notebook.  
+Please go to the following link for this module:  [**Video Game Sales**](../modules/Video_Game_Sales.md). 
 
 When you're finished, return here to move on to the next module.  
 
 
 ## Image Classification 
 
-Please go to the following link for this module:  [**Image Classification with Transfer Learning**](../modules/Image_Classification_Transfer_Learning.md).  Be sure to use the downloaded version of the applicable Jupyter notebook.  
+Please go to the following link for this module:  [**Image Classification with Transfer Learning**](../modules/Image_Classification_Transfer_Learning.md). 
 
 When you're finished, return here and go on to the Cleanup Guide.  
 
@@ -69,5 +53,3 @@ When you're finished, return here and go on to the Cleanup Guide.
 ## Cleanup
 
 To avoid charges for endpoints and other resources you might not need after the workshop, please refer to the [**Cleanup Guide**](../CleanupGuide).
-
-
