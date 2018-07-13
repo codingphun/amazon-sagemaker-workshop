@@ -19,4 +19,4 @@ To proceed, follow these steps:
 
 ***NOTE:  training the model for this example typically takes about 10 minutes.***
 
-5. When you're finished, return back to [**Distributed Training with SageMaker**](../Distributed) to move on to the next module.
+5. When you're finished, return back to [**Distributed Training with SageMaker**](../DistributedTraining) to move on to the next module.
