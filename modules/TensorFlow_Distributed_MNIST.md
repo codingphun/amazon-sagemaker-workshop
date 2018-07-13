@@ -1,19 +1,22 @@
 ## Distributed Training with TensorFlow 
 
 
-In this module we will be using images of handwritten digits from the [MNIST Database](http://yann.lecun.com/exdb/mnist/) to demonstrate how to perform distributed training using SageMaker. Using a convolutional neural network model based on the [TensorFlow MNIST Example](https://github.com/tensorflow/models/tree/master/official/mnist), we will demonstrate how to use the [SageMaker Python SDK](https://github.com/aws/sagemaker-python-sdk) to create your own script to pre-process data, train a model, create a SageMaker hosted endpoint, and make predictions against this endpoint. 
+In this module, we will be using images of handwritten digits from the [MNIST Database](http://yann.lecun.com/exdb/mnist/) to demonstrate how to perform distributed training using SageMaker. The trained model will predict what the handwritten digit is in the image presented for prediction. The module will demonstrate how easy it is to set up and train a model on a cluster of multiple instances in distributed mode on SageMaker, makes model training exponentially faster. It will also demonstrate another powerful feature of SageMaker, the ability to bring your own custom TensorFlow script to train on SageMaker.   
 
-The model will predict what the handwritten digit is in the image presented for prediction. Besides demonstrating a "bring your own script" for TensorFlow use case, the example also showcases how easy it is to set up a cluster of multiple instances for model training in SageMaker.
+To proceed, follow these steps:
 
-1. Be sure you have downloaded this GitHub repository as specified in **Preliminaries** before you start.  Next, in your notebook instance, click the **New** button on the right and select **Folder**.
+1. Go to the Jupyter homepage from the SageMaker notebook instance.
 
-2. Click the checkbox next to your new folder, click the **Rename** button above in the menu bar, and give the folder a name such as 'tensorflow-distributed'.
+![Jupyter](./images/jupyter-homepage.png)
 
-3. Click the folder to enter it.
+2. In the Jupyter homepage, click on the SageMaker Examples tab and click on the **Use** button in **tensorflow_distributed_mnist.ipynb** row.
 
-4. To upload the notebook, click the **Upload** button on the right. Then in the file selection popup, select the file 'TensorFlow_Distributed_MNIST.ipynb' from the notebooks subdirectory in the folder on your computer where you downloaded this GitHub repository. Click the blue **Upload** button that appears to the right of the notebook's file name.
+![tfdistributed](./images/tf-distributed-use.png)
 
-5. You are now ready to begin the notebook:  click the notebook's file name to open it, then follow the directions in the notebook.
+3. In the pop up dialog box, click **Create copy** button to create and launch a copy of the notebook.
 
+4. Follow the directions in the notebook.
 
-<p><strong>NOTE:  training the model for this example typically takes about 8 minutes.</strong></p>
+***NOTE:  training the model for this example typically takes about 10 minutes.***
+
+5. When you're finished, return back to [**Distributed Training with SageMaker**](../Distributed) to move on to the next module.
