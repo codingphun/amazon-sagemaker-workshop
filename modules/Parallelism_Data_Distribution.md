@@ -21,4 +21,4 @@ To proceed, follow these steps:
 
 5. In the ```bucket = '<your_s3_bucket_name_here>'``` code line, paste the name of the S3 bucket you created in [**Creating a Notebook Instance**](../NotebookCreation) to replace ```<your_s3_bucket_name_here>```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name. 
 
-6. When you're finished, return back to [**Distributed Training with SageMaker**](../Distributed) to move on to the next module.
+6. When you're finished, return back to [**Distributed Training with SageMaker**](../DistributedTraining) to move on to the next module.
