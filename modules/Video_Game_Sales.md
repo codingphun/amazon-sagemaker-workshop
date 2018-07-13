@@ -27,3 +27,5 @@ This module also shows how to use SageMaker's built-in algorithms via hosted Jup
 
 - To check the actual training time (not including cluster setup) for a job when it is complete, click the training job name in the jobs table, then examine the **Training time** listed at the top right under **Job Settings**.  
 
+8. When you're finished, return back to [**Introduction to SageMaker**](../Introduction) to move on to the next module.
+
