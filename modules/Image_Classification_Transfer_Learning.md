@@ -7,20 +7,18 @@ In this module, we'll work with an image classification example notebook. In par
 
 To proceed, follow these steps:
 
-1. For this part of the module, we'll be using a SageMaker notebook instance to explore and visualize a data set.  
-
-2. Go to the Jupyter homepage from the SageMaker notebook instance.
+1. Go to the Jupyter homepage from the SageMaker notebook instance.
 
 ![Jupyter](./images/jupyter-homepage.png)
 
-3. In the Jupyter homepage, click on the SageMaker Examples tab and click on the **Use** button in **Image-classification-transfer-learning.ipynb** row.
+2. In the Jupyter homepage, click on the SageMaker Examples tab and click on the **Use** button in **Image-classification-transfer-learning.ipynb** row.
 
-![xgboost](./images/image-classification-use.png)
+![classification](./images/image-classification-use.png)
 
-4. In the pop up dialog box, click **Create copy** button to create and launch a copy of the notebook.
+3. In the pop up dialog box, click **Create copy** button to create and launch a copy of the notebook.
 
-5. Follow the directions in the notebook.
+4. Follow the directions in the notebook.
 
 ***NOTE:  training the model for this example typically takes about 10 minutes.*** However, keep in mind that this is relatively short because transfer learning is used rather than training from scratch, which could take many hours.
 
-6. When you're finished, return back to [**Introduction to SageMaker**](../Introduction) to move on to the next module.
+5. When you're finished, return back to [**Introduction to SageMaker**](../Introduction) to move on to the next module.
