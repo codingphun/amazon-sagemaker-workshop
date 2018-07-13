@@ -1,4 +1,4 @@
-# Introduction to SageMaker
+# Distributed Training with SageMaker
 
 ## Modules
 
