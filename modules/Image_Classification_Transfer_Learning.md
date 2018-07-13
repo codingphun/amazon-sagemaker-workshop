@@ -1,9 +1,9 @@
-## Image Classification 
+## Image Classification with Transfer Learning
 
 
 In this module, we'll work with an image classification example notebook. In particular, we'll use Amazon SageMaker's built-in image classification algorithm, which is a supervised learning algorithm that takes an image as input and classifies it into one of multiple output categories. 
 
- We will use its transfer learning mode to fine-tune a pre-trained model that was trained on imagenet data to learn to classify a new dataset from Caltech. The technique of transfer learning is basically using an existing trained model and resuse it to train a new model. This is very useful when a large number of training images are not available and can also speeds up the training process significantly as it is not training from complete scratch. Even if you don't have experience with neural networks or image classification, SageMaker's image classification algorithm makes the technology easy to use, with no need to design and set up your own neural network.  
+We will also use the algorithm's transfer learning mode to fine-tune a pre-trained model that was trained on imagenet data to learn to classify a new dataset from Caltech. The technique of transfer learning is basically using an existing trained model and resuse it to train a new model. This is very useful when a large number of training images are not available and can also speeds up the training process significantly as it is not training from complete scratch. Even if you don't have experience with neural networks or image classification, SageMaker's image classification algorithm makes the technology easy to use, with no need to design and set up your own neural network.  
 
 To proceed, follow these steps:
 
