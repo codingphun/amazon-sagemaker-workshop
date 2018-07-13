@@ -48,7 +48,7 @@ For these workshops, you'll use built-in shell terminal on Jupyter notebook in S
 - [**Introduction to SageMaker**](Introduction) - This workshop demonstrates the main features of SageMaker via a set of straightforward examples for common use cases.
 
 
-- [**SageMaker Built-in Algorithms**](Built-in-Algorithms) - The focus of this workshop is on SageMaker's built-in algorithms. These algorithms are ready-to-use, scalable, and provide many other conveniences. The workshop shows how to use SageMaker's built-in algorithms via hosted Jupyter notebooks, the AWS CLI, and the SageMaker console.
+- [**Distributed Training with SageMaker**](DistributedTraining) - The focus of this workshop is to demonstrate how to use one of most powerful SageMaker's features, distributed training.
 
 # License & Contributing
 
