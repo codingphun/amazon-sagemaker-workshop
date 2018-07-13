@@ -1,22 +1,24 @@
 ## Image Classification 
 
 
-For this module, we'll work with an image classification example notebook. In particular, we'll use Amazon SageMaker's built-in image classification algorithm, which is a supervised learning algorithm that takes an image as input and classifies it into one of multiple output categories. 
+In this module, we'll work with an image classification example notebook. In particular, we'll use Amazon SageMaker's built-in image classification algorithm, which is a supervised learning algorithm that takes an image as input and classifies it into one of multiple output categories. 
 
-It uses a convolutional neural network (ResNet) that can be trained from scratch, or trained using transfer learning.  The technique of transfer learning is useful when a large number of training images are not available. Even if you don't have experience with neural networks or image classification, SageMaker's image classification algorithm makes the technology easy to use, with no need to design and set up your own neural network.  
+ We will use its transfer learning mode to fine-tune a pre-trained model that was trained on imagenet data to learn to classify a new dataset from Caltech. The technique of transfer learning is basically using an existing trained model and resuse it to train a new model. This is very useful when a large number of training images are not available and can also speeds up the training process significantly as it is not training from complete scratch. Even if you don't have experience with neural networks or image classification, SageMaker's image classification algorithm makes the technology easy to use, with no need to design and set up your own neural network.  
 
-Follow these steps:
+To proceed, follow these steps:
 
-1. Be sure you have downloaded this GitHub repository as specified in **Preliminaries** before you start.  Next, in your notebook instance, click the **New** button on the right and select **Folder**.  
+1. For this part of the module, we'll be using a SageMaker notebook instance to explore and visualize a data set.  
 
-2. Click the checkbox next to your new folder, click the **Rename** button above in the menu bar, and give the folder a name such as 'image-classification'.
+2. Go to the Jupyter homepage from the SageMaker notebook instance.
 
-3. Click the folder to enter it.
+![Jupyter](./images/jupyter-homepage.png)
 
-4. To upload the notebook, click the **Upload** button on the right. Then in the file selection popup, select the file 'Image-classification-transfer-learning.ipynb' from the notebooks subdirectory in the folder on your computer where you downloaded this GitHub repository. Click the blue **Upload** button that appears to the right of the notebook's file name.
+3. In the Jupyter homepage, click on the SageMaker Examples tab and click on the **Use** button in **Image-classification-transfer-learning.ipynb** row.
 
-5. You are now ready to begin the notebook:  click the notebook's file name to open it, then follow the directions in the notebook.
+![xgboost](./images/image-classification-use.png)
 
+4. In the pop up dialog box, click **Create copy** button to create and launch a copy of the notebook.
+
+5. Follow the directions in the notebook.
 
 <p><strong>NOTE:  training the model for this example typically takes about 10 minutes.</strong> However, keep in mind that this is relatively short because transfer learning is used rather than training from scratch, which could take many hours.</p>
-
