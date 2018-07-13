@@ -5,20 +5,21 @@ In this module, we'll work our way through an example Jupyter notebook that demo
 
 Gradient boosting is a supervised learning algorithm that attempts to predict a target variable by combining the estimates of a set of simpler, weaker models. XGBoost has done remarkably well in machine learning competitions because it robustly handles a wide variety of data types, relationships, and distributions. It often is a useful, go-to algorithm in working with structured data, such as data that might be found in relational databases and flat files. 
 
-This module also shows how to use SageMaker's built-in algorithms via hosted Jupyter notebooks, the AWS CLI, and the SageMaker console.  To proceed, follow these steps:
+This module also shows how to use SageMaker's built-in algorithms via hosted Jupyter notebooks and the SageMaker console.  To proceed, follow these steps:
 
-1. **Exploratory Data Analysis**:  For this part of the module, we'll be using a SageMaker notebook instance to explore and visualize a data set.  Be sure you have downloaded this GitHub repository as specified in **Preliminaries** before you start.  Next, in your notebook instance, click the **New** button on the right and select **Folder**.  
+1. **Exploratory Data Analysis**:  For this part of the module, we'll be using a SageMaker notebook instance to explore and visualize a data set.  
 
-2. Click the checkbox next to your new folder, click the **Rename** button above in the menu bar, and give the folder a name such as 'video-game-sales'.
+2. Go to your Jupyter homepage in your SageMaker notebook instance.
 
-3. Click the folder to enter it.
+![Jupyter](./images/jupyter-homepage.png)
 
-4. To upload the notebook, click the **Upload** button on the right. Then in the file selection popup, select the file 'video-game-sales-xgboost.ipynb' from the notebooks subdirectory in the folder on your computer where you downloaded this GitHub repository. Click the blue **Upload** button that appears to the right of the notebook's file name.
-5. You are now ready to begin the notebook:  click the notebook's file name to open it.
+3. In Jupyter homepage, click on SageMaker Examples tab and click on **Use** button next to **video-game-sales-xgboost.ipynb**
 
-6. In the ```bucket = '<your_s3_bucket_name_here>'``` code line, paste the name of the S3 bucket you created in Module 1 to replace ```<your_s3_bucket_name_here>```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name.  
+![xgboost](./images/xgboost-use.png)
 
-7. Follow the directions in the notebook.  When it is time to set up a training job, return from the notebook to these instructions.  
+4. In the pop up dialog box, click **Create copy** button to create and launch a copy of the notebook.
+
+5. Follow the directions in the notebook.
 
 8. **Training Job**:  Now that we have our data in S3, we can begin training a model. We'll use SageMaker's built-in version of the XGBoost algorithm, and the AWS CLI to run the training job.  XGBoost has many tunable hyperparameters. Some of these hyperparameters are listed below; initially we'll only use a few of them.  Many of the hyperparameters are used to prevent overfitting, which prevents a model from generalizing to new observations.  
 
