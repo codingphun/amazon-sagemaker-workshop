@@ -1,7 +1,7 @@
 ## Distributed Training with TensorFlow 
 
 
-In this module, we will be using images of handwritten digits from the [MNIST Database](http://yann.lecun.com/exdb/mnist/) to demonstrate how to perform distributed training using SageMaker. The trained model will predict what the handwritten digit is in the image presented for prediction. The module will demonstrate how easy it is to set up and train a model on a cluster of multiple instances in distributed mode on SageMaker, makes model training exponentially faster. It will also demonstrate another powerful feature of SageMaker, the ability to bring your own custom TensorFlow script to train on SageMaker.   
+In this module, we will be using images of handwritten digits from the [MNIST Database](http://yann.lecun.com/exdb/mnist/) to demonstrate how to perform distributed training using SageMaker. The trained model will predict what the handwritten digit is in the image presented for prediction. The module will demonstrate how easy it is to set up and train a model on a cluster of multiple instances in distributed mode on SageMaker, which makes model training exponentially faster. It will also demonstrate another powerful feature of SageMaker, the ability to bring your own custom TensorFlow script to train on SageMaker.   
 
 To proceed, follow these steps:
 
