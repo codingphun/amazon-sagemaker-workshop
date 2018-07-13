@@ -1,7 +1,7 @@
 ## Parallelized Data Distribution
 
 In this module, you will learn about how to take full advantage of distributed training clusters when using one of SageMaker's built-in algorithms. You will train two jobs and in the first job, you'll use ***FullyReplicated*** for your train channel. This will pass every file in your input S3 location to every machine (in this lab, 5 machines).
-In the second job, you'll use ***ShardedByS3Key*** for the train channel, this means that data are distributed and each machine will only train on a fraction of the data. This is especailly useful when you have a large training dataset that can not be fit on a single machine.
+In the second job, you'll use ***ShardedByS3Key*** for the train channel, this means that data are distributed and each machine will only train on a fraction of the data. This is especailly useful when you have a large training dataset that can not fit on a single machine.
 
 To proceed, follow these steps:
 
