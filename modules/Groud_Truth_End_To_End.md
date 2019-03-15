@@ -18,7 +18,7 @@ You will use SageMaker notebook in this module.  To proceed, follow these steps:
 
 3. Rename the new folder from **Untitled Folder** to **GroundTruth**  
 
-![Jupyter New Folder](./images/jupyter-new-folder.png)
+![Jupyter New Folder](./images/jupyter-rename-folder.png)
 
 4. Go in to the GroundTruth folder and upload the [Ground Truth notebook](https://aws.amazon.com/sagemaker/)
 
