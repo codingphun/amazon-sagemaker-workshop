@@ -36,7 +36,7 @@ To create a SageMaker notebook instance for this workshop, follow the instructio
 
 ## Labeling Images with Ground Truth 
 
-Please go to the following link for this module:  [**Labeling Images with Ground Truth**](../modules/Labeling_Images_Groud_Truth.md). 
+Please go to the following link for this module:  [**Labeling Images with Ground Truth**](../modules/Groud_Truth_End_To_End.md). 
 
 When you're finished, return here to move on to the next module.  
 
