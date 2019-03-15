@@ -48,7 +48,7 @@ Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your
 
 ![Notebook IAM Role](./images/notebook-iam.png)
 
-6. Click **Create notebook instance**.
+6. Leave all other fields default and click **Create notebook instance**.
 
 ### 3. Accessing the Notebook Instance
 
