@@ -50,7 +50,7 @@ For these workshops, you'll use built-in shell terminal on Jupyter notebook in S
 
 - [**Distributed Training with SageMaker**](DistributedTraining) - The focus of this workshop is to demonstrate how to use one of most powerful SageMaker's features, distributed training.
 
-- [**Working with SageMaker Groud Truth**](GroundTruth) - This workshop demonstrates how to label data with SageMaker's Ground Truth.
+- [**Labeling Data with SageMaker Groud Truth**](GroundTruth) - This workshop demonstrates how to label data with SageMaker's Ground Truth.
 
 # License & Contributing
 
