@@ -20,7 +20,7 @@ You will use SageMaker notebook in this module.  To proceed, follow these steps:
 
 ![Jupyter New Folder](./images/jupyter-rename-folder.png)
 
-4. Go in to the GroundTruth folder and upload the [Ground Truth notebook](https://aws.amazon.com/sagemaker/)
+4. Go in to the GroundTruth folder and upload the [Ground Truth notebook](./notebooks/ground_truth_end_to_end.ipynb)
 
 5. When you're finished, return back to [**Introduction to SageMaker**](../Introduction) to move on to the next module.
 
