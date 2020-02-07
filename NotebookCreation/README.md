@@ -38,7 +38,7 @@ Use the console or AWS CLI to create an Amazon S3 bucket. Keep in mind that your
 
 ![Notebook Instances](./images/notebook-instances.png)
 
-4. Type `sagemaker-workshop-firstname-lastname` into the **Notebook instance name** text box, and select ml.m4.xlarge for the **Notebook instance type**.
+4. Type `sagemaker-workshop-firstname-lastname` into the **Notebook instance name** text box, and select **ml.m4.xlarge** for the **Notebook instance type**.
 
 <!--
 ![Create Notebook Instance](./images/notebook-settings.png)
