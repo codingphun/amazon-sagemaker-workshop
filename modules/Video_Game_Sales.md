@@ -13,7 +13,7 @@ This module also shows how to use SageMaker's built-in algorithms via hosted Jup
 
 ![Jupyter](./images/jupyter-homepage.png)
 
-3. In the Jupyter homepage, click on the SageMaker Examples tab and click on the **Use** button in **video-game-sales-xgboost.ipynb** row.
+3. In the Jupyter homepage, click on the SageMaker Examples tab then **Introduction to appling machine learning** section and click on the **Use** button in **video-game-sales-xgboost.ipynb** row.
 
 ![xgboost](./images/xgboost-use.png)
 
@@ -21,7 +21,7 @@ This module also shows how to use SageMaker's built-in algorithms via hosted Jup
 
 5. Follow the directions in the notebook.
 
-6. In the ```bucket = '<your_s3_bucket_name_here>'``` code line, paste the name of the S3 bucket you created in [**Creating a Notebook Instance**](../NotebookCreation) to replace ```<your_s3_bucket_name_here>```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name. 
+6. In the ```bucket = session.default_bucket()``` code line, paste the name of the S3 bucket you created in [**Creating a Notebook Instance**](../NotebookCreation) to replace ```session.default_bucket()```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name. 
 
 7. In addition to the output of training job in Jupyter, you can also check the status of your training jobs in the SageMaker console.  the SageMaker console, click **Jobs** in the left panel to check the status of the training job.  When the job is complete, its **Status** column will change from InProgress to Complete.  As a reminder, duration of this job can last up to about 10 minutes, including time for setting up the training cluster.
 
