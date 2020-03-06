@@ -7,7 +7,7 @@ Gradient boosting is a supervised learning algorithm that attempts to predict a 
 
 This module also shows how to use SageMaker's built-in algorithms via hosted Jupyter notebooks and the SageMaker console.  To proceed, follow these steps:
 
-1. Download the Video Game csv dataset here (./assets/Video_Games_Sales_as_at_22_Dec_2016.csv)
+1. Download the Video Game csv dataset [here] (./assets/Video_Games_Sales_as_at_22_Dec_2016.csv)
 
 2. **Exploratory Data Analysis**:  For this part of the module, we'll be using a SageMaker notebook instance to explore and visualize a data set.  
 
