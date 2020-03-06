@@ -7,19 +7,31 @@ Gradient boosting is a supervised learning algorithm that attempts to predict a 
 
 This module also shows how to use SageMaker's built-in algorithms via hosted Jupyter notebooks and the SageMaker console.  To proceed, follow these steps:
 
-1. **Exploratory Data Analysis**:  For this part of the module, we'll be using a SageMaker notebook instance to explore and visualize a data set.  
+1. Download the Video Game csv dataset here (./assets/Video_Games_Sales_as_at_22_Dec_2016.csv)
 
-2. Go to the Jupyter homepage from the SageMaker notebook instance.
+2. **Exploratory Data Analysis**:  For this part of the module, we'll be using a SageMaker notebook instance to explore and visualize a data set.  
+
+3. Go to the Jupyter homepage from the SageMaker notebook instance.
 
 ![Jupyter](./images/jupyter-homepage.png)
 
-3. In the Jupyter homepage, click on the SageMaker Examples tab then **Introduction to appling machine learning** section and click on the **Use** button in **video-game-sales-xgboost.ipynb** row.
+4. In the Jupyter homepage, click on the SageMaker Examples tab then **Introduction to appling machine learning** section and click on the **Use** button in **video-game-sales-xgboost.ipynb** row.
 
 ![xgboost](./images/xgboost-use.png)
 
-4. In the pop up dialog box, click **Create copy** button to create and launch a copy of the notebook.
+5. In the pop up dialog box, click **Create copy** button to create and launch a copy of the notebook.
 
-5. Follow the directions in the notebook.
+6. Click on **Jupyter** icon on the top left screen. 
+
+![xgboost-Jupyter](./images/xgboost-jupyter-icon.png)
+
+6. Click on **video_games_sales_####** folder.
+
+7. Make sure you are in the **video_games_sales_###** folder then click on **upload** button and upload the csv file from step 1. Select the csv file on your computer and then click **upload button** again. 
+
+![xgboost-upload](./images/xgboost-jupyter-upload.png)
+
+8. Click on **video-game-sales-xgboost.ipynb** file and follow the directions in the notebook. Note that you no longer need to download dataset from Kaggle as you have already done so from previous steps so it's perfectly safe to ignore that instruction in the notebook.
 
 6. In the first coding block, find ```bucket = session.default_bucket()``` code line, paste the name of the S3 bucket you created in [**Creating a Notebook Instance**](../NotebookCreation) to replace ```session.default_bucket()```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name. 
 
