@@ -33,13 +33,13 @@ This module also shows how to use SageMaker's built-in algorithms via hosted Jup
 
 8. Click on **video-game-sales-xgboost.ipynb** file and follow the directions in the notebook. Note that you no longer need to download dataset from Kaggle as you have already done so from previous steps so it's perfectly safe to ignore that instruction in the notebook.
 
-6. In the first coding block, find ```bucket = session.default_bucket()``` code line, paste the name of the S3 bucket you created in [**Creating a Notebook Instance**](../NotebookCreation) to replace ```session.default_bucket()```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name. 
+9. In the first coding block, find ```bucket = session.default_bucket()``` code line, paste the name of the S3 bucket you created in [**Creating a Notebook Instance**](../NotebookCreation) to replace ```session.default_bucket()```.  The code line should now read similar to ```bucket = 'sagemaker-workshop-john-smith'```.  Do NOT paste the entire path (s3://.......), just the bucket name. 
 
 ![xgboost-bucket](./images/xgboost-bucket.png)
 
-7. In addition to the output of training job in Jupyter, you can also check the status of your training jobs in the SageMaker console.  the SageMaker console, click **Jobs** in the left panel to check the status of the training job.  When the job is complete, its **Status** column will change from InProgress to Complete.  As a reminder, duration of this job can last up to about 10 minutes, including time for setting up the training cluster.
+10. In addition to the output of training job in Jupyter, you can also check the status of your training jobs in the SageMaker console.  the SageMaker console, click **Jobs** in the left panel to check the status of the training job.  When the job is complete, its **Status** column will change from InProgress to Complete.  As a reminder, duration of this job can last up to about 10 minutes, including time for setting up the training cluster.
 
 - To check the actual training time (not including cluster setup) for a job when it is complete, click the training job name in the jobs table, then examine the **Training time** listed at the top right under **Job Settings**.  
 
-8. When you're finished, return back to [**Introduction to SageMaker**](../Introduction) to move on to the next module.
+11. When you're finished, return back to [**Introduction to SageMaker**](../Introduction) to move on to the next module.
 
